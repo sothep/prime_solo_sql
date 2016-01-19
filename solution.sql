@@ -16,7 +16,7 @@ SELECT COUNT(id)
 FROM authors;
 
 --Question 5
-SELECT authors_and_titles 
+SELECT unnest(authors_and_titles[1:3][1]) 
 FROM favorite_authors 
 WHERE favorite_authors.employee_id = 
 (SELECT id 
